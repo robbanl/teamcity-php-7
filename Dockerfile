@@ -14,7 +14,7 @@ RUN docker-php-ext-install xsl
 RUN docker-php-ext-install pdo_mysql
 RUN docker-php-ext-install sockets
 
-COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
+COPY --from=composer:1 /usr/bin/composer /usr/local/bin/composer
 
 ENTRYPOINT ["docker-php-entrypoint"]
 
