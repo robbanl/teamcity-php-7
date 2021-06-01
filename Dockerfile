@@ -2,7 +2,7 @@ FROM php:7.3-cli
 
 LABEL maintainer="robert@codepeak.se"
 
-RUN apt update ; apt install -y libzip-dev libicu-dev libxml2-dev libpng-dev libxslt-dev
+RUN apt update ; apt install -y libzip-dev libicu-dev libxml2-dev libpng-dev libxslt-dev unzip git
 RUN docker-php-ext-install pcntl
 RUN docker-php-ext-install exif
 RUN docker-php-ext-install zip
